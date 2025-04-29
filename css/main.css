@@ -1,6 +1,7 @@
 @import url("../css/navegacao.css");
 @import url("../css/banner.css");
 @import url("../css/responsivo.css");
+@import url("../css/contato.css");
 
 
 
@@ -32,4 +33,12 @@ img {
 margin: 0 auto;
 padding: 0 20px;
 max-width: 85%;
+}
+
+section{
+    margin-bottom: 10px;
+}
+
+h2{
+    margin-bottom: 15px;
 }

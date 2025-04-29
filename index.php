@@ -1,4 +1,5 @@
-
+<!DOCTYPE html>
+<html lang="pt-BR">
 <?php  include('./snippets/header.html');?>
 <body>
     <!-- Barra de Navegação -->
@@ -24,6 +25,9 @@
 
     <!-- Botão flutuante compartilhar -->
     <?php include('./snippets/botao-flutuante.html'); ?>
+
+     <!-- Sessão dos contatos -->
+     <?php include('./snippets/contato.html'); ?>
 
     <!-- Footer -->
     <?php include('./snippets/rodape.html'); ?>

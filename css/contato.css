@@ -1,0 +1,15 @@
+
+    .contato-info {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .contato-info i {
+        margin-right: 10px;
+        font-size: 1.2em; /* Ajuste o tamanho do ícone, se necessário */
+    }
+
+    .contato-info p {
+        margin: 0;
+    }
