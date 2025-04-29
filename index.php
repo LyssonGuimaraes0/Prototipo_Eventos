@@ -1,4 +1,5 @@
-
+<!DOCTYPE html>
+<html lang="pt-BR">
 <?php  include('./snippets/header.html');?>
 <body>
     <!-- Barra de Navegação -->
@@ -16,6 +17,9 @@
     <!-- Sessão Termo -->
     <?php include('./snippets/termo.html'); ?>
 
+    <!-- Sessão Menu -->
+    <?php include('./snippets/menu.html'); ?>
+   
     <!-- Sessão de Download -->
     <?php include('./snippets/download.html'); ?>
 
@@ -24,6 +28,9 @@
 
     <!-- Botão flutuante compartilhar -->
     <?php include('./snippets/botao-flutuante.html'); ?>
+
+     <!-- Sessão dos contatos -->
+     <?php include('./snippets/contato.html'); ?>
 
     <!-- Footer -->
     <?php include('./snippets/rodape.html'); ?>
