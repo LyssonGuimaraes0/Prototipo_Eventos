@@ -16,6 +16,9 @@
     <!-- Sessão Termo -->
     <?php include('./snippets/termo.html'); ?>
 
+    <!-- Sessão Menu -->
+    <?php include('./snippets/menu.html'); ?>
+   
     <!-- Sessão de Download -->
     <?php include('./snippets/download.html'); ?>
 
