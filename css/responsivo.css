@@ -1,3 +1,12 @@
+@media screen and(max-width:1024px){
+    .menu-section .menu-list{
+        gap: 60px;
+    }
+    .menu-section .menu-list .menu-item{
+        width: calc(100%/2 - 60px);
+    }
+}
+
 @media screen and (max-width: 900px){
 
     .banner-section .section-content{
@@ -85,10 +94,24 @@
            max-width: 270px;
            margin-right: 0;
         }
-
-        .contato{
-            
+        .menu-section .menu-list{
+            gap: 30px;
         }
-    
+        .menu-section .menu-list .menu-item{
+            width: calc(100%/2 - 30px);
+        }
+        .menu-section .menu-list .menu-item .menu-image{
+            max-width: 200px;
+        }
+ 
+        
+}
+@media screen and (max-width:640px){
+    .menu-section .menu-list{
+        gap: 60px;
+    }
+    .menu-section .menu-list .menu-item .menu-image{
+        max-width: 100px;
+    }
 }
 
