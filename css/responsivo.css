@@ -72,7 +72,8 @@
             flex-direction: column-reverse;
             justify-content: center;
         }
-        .banner-section .banner-details :is(.subtitulo,.descricao){
+        .banner-section .banner-details :is(.subtitulo,.descricao), 
+        .about-section.banner-details{
             max-width: 100%;
             
         }
@@ -86,9 +87,16 @@
            margin-right: 0;
         }
 
-        .contato{
-            
+        .about-section .section-content{
+            gap: 70px;
+            flex-direction: column;
         }
-    
-}
 
+        .about-section .banner-image-wrapper .about-image{
+            width: 100%;
+            height: 100%;
+            max-width: 250px;
+            aspect-ratio: 1;
+        }
+        
+}
