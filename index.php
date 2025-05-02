@@ -13,15 +13,12 @@
 
     <!-- Sessão Sobre -->
     <?php include('./snippets/sobre.html'); ?>
+    
+    <!-- Sessão dos Programacao -->
+    <?php include('./snippets/programacao.html'); ?>
 
-    <!-- Sessão Termo -->
-    <?php include('./snippets/termo.html'); ?>
-
-    <!-- Sessão Menu -->
-    <?php include('./snippets/menu.html'); ?>
-   
-    <!-- Sessão de Download -->
-    <?php include('./snippets/download.html'); ?>
+    <!-- Sessão dos Patrocinadores -->
+    <?php include('./snippets/palestrantes.html'); ?>
 
     <!-- Sessão dos Patrocinadores -->
     <?php include('./snippets/patrocinio.html'); ?>
