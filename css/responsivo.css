@@ -81,7 +81,8 @@
             flex-direction: column-reverse;
             justify-content: center;
         }
-        .banner-section .banner-details :is(.subtitulo,.descricao){
+        .banner-section .banner-details :is(.subtitulo,.descricao), 
+        .about-section.banner-details{
             max-width: 100%;
             
         }
@@ -114,4 +115,3 @@
         max-width: 100px;
     }
 }
-

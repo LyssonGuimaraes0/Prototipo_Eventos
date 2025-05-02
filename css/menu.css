@@ -5,22 +5,25 @@
 .menu-section{
    color: var(--white-color);
    background: var(--dark-color);
-   padding: 50px 0 100px;
 }
 .menu-section .menu-list{
     display: flex;
     flex-wrap: wrap;
     gap: 110px;
     align-items: center;
+    justify-items: center;
+    align-content: center;
+    justify-content: center;
 }
 
 .menu-section .menu-list .menu-item{
     display: flex;
     align-items: center;
     text-align: center;
+    justify-items: center;
     flex-direction: column;
     justify-content: space-between;
-    width: calc(100%/3 - 110px);
+    flex: 1 1 calc(33.33% - 110px);
 }
 
 .menu-section .menu-list .menu-item .menu-image{
