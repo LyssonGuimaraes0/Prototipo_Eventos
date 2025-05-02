@@ -38,18 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     navLinks.forEach((link) => {
-      // Ignorar atualização de classes para links dentro da seção "programacao"
-      if (link.closest("#programacao")) {
-        return;
-      }
-
-      if (link.hash === currentSection) {
-        link.classList.add("active");
-      } else {
-        link.classList.remove("active");
-      }
-    });
-  }
+     
 
   // Adicionar evento de rolagem para atualizar as classes 'active'
   window.addEventListener("scroll", updateActiveLink);
@@ -75,4 +64,13 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
+});
+
+    // Adicionar evento de rolagem para atualizar as classes 'active'
+    window.addEventListener("scroll", updateActiveLink);
+
+    // Atualizar as classes 'active' ao carregar a página
+    updateActiveLink();
+
+}
 });
