@@ -104,7 +104,11 @@
         .menu-section .menu-list .menu-item .menu-image{
             max-width: 200px;
         }
- 
+
+        .about-section .section-content{
+            flex-direction: column;
+            gap: 30px;
+        }
         
 }
 @media screen and (max-width:640px){
