@@ -43,5 +43,9 @@ header .navbar {
     color: white
 }
 
-/*Ajustes de Responsividade*/
+.nav-link.active {
+    color: burlywood;
+    background-color: burlywood;
+
+}
 

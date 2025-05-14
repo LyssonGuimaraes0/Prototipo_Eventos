@@ -8,9 +8,6 @@
     <!-- Sessão Banner -->
     <?php include('./snippets/banner.html'); ?>
 
-    <!-- Noticias -->
-    <?php include('./snippets/noticia.html'); ?>
-
     <!-- Sessão Sobre -->
     <?php include('./snippets/sobre.html'); ?>
     
@@ -20,11 +17,6 @@
     <!-- Sessão dos Patrocinadores -->
     <?php include('./snippets/palestrantes.html'); ?>
 
-    <!-- Sessão dos Patrocinadores -->
-    <?php include('./snippets/patrocinio.html'); ?>
-
-    <!-- Botão flutuante compartilhar -->
-    <?php include('./snippets/botao-flutuante.html'); ?>
 
      <!-- Sessão dos contatos -->
      <?php include('./snippets/contato.html'); ?>

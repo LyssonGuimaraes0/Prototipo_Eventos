@@ -109,6 +109,46 @@
             flex-direction: column;
             gap: 30px;
         }
+
+                /*Ajuste de responsividade na  Area de sobre e programação*/
+
+                .about-section .section-content,
+                .programacao-section .text {
+            max-width: 100%; /* Permite que o texto ocupe toda a largura do container */
+            margin: 0; /* Remove margens laterais */
+            text-align: justify; /* Justifica o texto para ocupar todo o espaço horizontal */
+            line-height: 1.8; /* Aumenta o espaçamento entre as linhas para melhor legibilidade */
+        }
+        
+            .about-section{
+                padding-left: 0px !important;
+                padding-right: 0px !important;
+            }
+        
+            .about-section .about-details .text{
+                text-align: justify !important;
+            }
+        
+                
+        
+                /*Ajuste de responsividade na  Area de palestrante*/
+        
+        
+                .menu-section .menu-list {
+                    flex-direction: column; 
+                    gap: 70px !important; 
+                }
+            
+                .menu-section .menu-list .menu-item {
+                    flex: 1 1 100%; 
+                    max-width: 100%; 
+                }
+            
+                .menu-section .menu-list .menu-item .menu-image {
+                    width: 100%;
+                    margin-bottom: 10px; 
+                }
+        
         
 }
 @media screen and (max-width:640px){
