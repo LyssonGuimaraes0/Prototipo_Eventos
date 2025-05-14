@@ -1,10 +1,7 @@
-:root{
-    --white-color: #ffffff;
-    --dark-color: #000000;
-}
 .menu-section{
    color: var(--white-color);
-   background: var(--dark-color);
+   background: yellowgreen;
+
 }
 .menu-section .menu-list{
     display: flex;
@@ -40,4 +37,11 @@
 }
 .menu-section .menu-list .menu-item .text{
     font-size: var(--font-size-m);
+}
+.menu-section .menu-list .menu-item .menu-image {
+    margin-bottom: 15px;
+    object-fit: cover; /* Preenche o contêiner sem distorcer */
+    display: block;
+    border-radius: 50%; 
+    overflow: hidden; /* Garante que o conteúdo não ultrapasse o contêiner */
 }
