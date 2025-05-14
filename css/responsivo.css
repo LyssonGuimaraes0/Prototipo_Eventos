@@ -353,3 +353,20 @@
                     margin: 0 auto 15px auto; /* Centraliza a imagem */
                 }        
 }
+@media screen and (max-width:410px) {
+    #programacaoContent {
+        width: 100%;
+        height: auto;
+        font-size: 12px; /* Reduz o tamanho da fonte */
+        overflow-x: auto; /* Permite rolagem horizontal se necessário */
+    }
+
+    .table-container {
+        width: 100%; /* Ajusta a largura da tabela */
+        font-size: 10px; /* Reduz o tamanho da fonte dentro da tabela */
+    }
+
+    .table-container th, .table-container td {
+        padding: 5px; /* Reduz o espaçamento interno das células */
+    }
+}
