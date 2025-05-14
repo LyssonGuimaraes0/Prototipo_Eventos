@@ -50,7 +50,24 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+//Clipes para os botões da tabela
+ document.addEventListener("DOMContentLoaded", function () {
+        const tabs = document.querySelectorAll(".tab-button");
+        const panes = document.querySelectorAll(".tab-pane");
 
+        tabs.forEach((tab) => {
+            tab.addEventListener("click", function () {
+                tabs.forEach((t) => t.classList.remove("active"));
+                panes.forEach((pane) => pane.classList.remove("active"));
+
+                this.classList.add("active");
+                const targetPane = document.querySelector(`#${this.dataset.tab}`);
+                if (targetPane) {
+                    targetPane.classList.add("active");
+                }
+            });
+        });
+    });
 
 
 
