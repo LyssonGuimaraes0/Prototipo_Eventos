@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const menuabrir = document.getElementById("menu-abrir-button");
     const menufechar = document.getElementById("menu-fechar-button");
-
+    const menubotaofechar = document.getElementsByClassName("nav-link");
     if (menuabrir) {
         menuabrir.addEventListener("click", function () {
             document.body.classList.toggle("mobile-menu-show");
@@ -13,6 +13,19 @@ document.addEventListener("DOMContentLoaded", function () {
             document.body.classList.toggle("mobile-menu-show");
         });
     }
+
+    /*Pecorre um array de elementos e adiciona o evento de clique a cada um deles para fechar o menu
+     quando clicado*/
+
+    if (menubotaofechar) {
+        for (let i = 0; i < menubotaofechar.length; i++) {
+            menubotaofechar[i].addEventListener("click", function () {
+                document.body.classList.toggle("mobile-menu-show");
+            });
+        }
+      
+    }
+
 });
 
 document.addEventListener("DOMContentLoaded", function () {
