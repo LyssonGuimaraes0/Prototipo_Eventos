@@ -148,6 +148,19 @@
                     width: 100%;
                     margin-bottom: 10px; 
                 }
+
+                /*Ajuste de responsividade para programacao*/
+
+                .programacao-section{
+                    padding: 120px 0px !important;
+                }
+
+                .table-container {
+                    width: 100%; /* Ocupa toda a largura do container */
+                    height: 100%; /* Ocupa toda a altura do container */
+                    border-collapse: collapse; 
+                    overflow-x:visible !important;
+                  }
         
         
 }

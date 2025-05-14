@@ -1,3 +1,10 @@
+.programacao-section{
+    padding: 120px;
+    background-color: #f8f9fa;
+}
+
+
+
 #programacaoTabs {
         display: flex;
         gap: 10px;
