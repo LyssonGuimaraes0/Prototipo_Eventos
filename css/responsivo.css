@@ -1,372 +1,190 @@
-@media screen and(max-width:1024px){
-    .palestrantes-section .palestrantes-item{
+/* Estilo para tablets (1024px para baixo) */
+@media screen and (max-width: 1024px) {
+    .palestrantes-section .palestrantes-item {
         gap: 60px;
     }
-    .palestrantes-section .palestrantes-item .palestrantes-item{
+    .palestrantes-section .palestrantes-item .child-item {
         width: calc(100%/2 - 60px);
     }
 }
 
-@media screen and (max-width: 900px){
+/* Menu mobile e ajustes gerais (900px para baixo) */
+@media screen and (max-width: 900px) {
+    /* Menu mobile */
+    .navbar .nav-menu {
+        display: flex;
+        position: fixed;
+        left: -300px;
+        top: 0;
+        width: 300px;
+        height: 100%;
+        background: white;
+        flex-direction: column;
+        align-items: center;
+        padding: 100px 30px;
+        transition: left 0.2s ease;
+    }
+    
+    body.mobile-menu-show header::before {
+        content: "";
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(5px);
+        background: rgba(0, 0, 0, 0.2);
+    }
+    
+    .navbar .nav-menu .nav-link {
+        color: black;
+        font-size: larger;
+        display: block;
+        margin-top: 17px;
+    }
+    
+    .navbar #menu-fechar-button, 
+    .navbar #menu-abrir-button {
+        display: block;
+        font-size: larger;
+    }
+    
+    .navbar #menu-fechar-button {
+        position: absolute;
+        right: 30px;
+        top: 30px;
+    }
+    
+    .navbar #menu-abrir-button {
+        color: white;
+    }
+    
+    body.mobile-menu-show .navbar .nav-menu {
+        left: 0;
+    }
 
-    .banner-section .section-content{
+    /* Banner section */
+    .banner-section .section-content {
         gap: 50px;
         text-align: center;
         padding: 30px 20px 20px;
         flex-direction: column-reverse;
         justify-content: center;
-
-        
     }
-        .navbar .nav-menu{
-            display:block;
-            position: fixed;
-            left: -300px;
-            top: 0;
-            width: 300px;
-            height: 100%;
-            background: white;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 100px;
-            transition: left 0.2s ease;
     
-        }
+    .banner-section .banner-details :is(.subtitulo, .descricao), 
+    .about-section.banner-details {
+        max-width: 100%;
+    }
     
-        body.mobile-menu-show header::before{
-            content: "";
-            position: fixed;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            backdrop-filter: blur(5px);
-            background: rgba(0, 0, 0, 0.2);
-    
-        }
-    
-    
-    
-        .navbar .nav-menu .nav-link{
-            color: black;
-            font-size: larger;
-            display: block;
-            margin-top: 17px;
-    
-        }
-    
-        .navbar #menu-fechar-button, #menu-abrir-button{
-            display: block;
-            font-size: larger;
-        }
-    
-        .navbar #menu-fechar-button{
-            position: absolute;
-            right: 30px;
-            top: 30px;
-        }
-    
-        .navbar #menu-abrir-button{
-            color: white;
-        }
-        body.mobile-menu-show .navbar .nav-menu{
-            left: 0;
-        }
-
-        .banner-section .section-content{
-            gap: 50px;
-            text-align: center;
-            padding: 30px 20px 20px;
-            flex-direction: column-reverse;
-            justify-content: center;
-        }
-        .banner-section .banner-details :is(.subtitulo,.descricao), 
-        .about-section.banner-details{
-            max-width: 100%;
-            
-        }
-        .banner-section .banner-details .botoes{
-            justify-content: center;
-        }
-
-
-        .banner-section .banner-image-wrapper{
-           max-width: 270px;
-           margin-right: 0;
-        }
-        .palestrantes-section .palestrantes-item{
-            gap: 30px;
-        }
-        .palestrantes-section .palestrantes-item .palestrantes-item{
-            width: calc(100%/2 - 30px);
-        }
-        .palestrantes-section .palestrantes-item .palestrantes-item .menu-image{
-            max-width: 200px;
-        }
-
-        .about-section .section-content{
-            flex-direction: column;
-            gap: 30px;
-        }
-
-                /*Ajuste de responsividade na  Area de sobre e programação*/
-
-                .about-section .section-content,
-                .programacao-section .text {
-            max-width: 100%; /* Permite que o texto ocupe toda a largura do container */
-            margin: 0; /* Remove margens laterais */
-            text-align: justify; /* Justifica o texto para ocupar todo o espaço horizontal */
-            line-height: 1.8; /* Aumenta o espaçamento entre as linhas para melhor legibilidade */
-        }
-        
-            .about-section{
-                padding-left: 0px !important;
-                padding-right: 0px !important;
-            }
-        
-            .about-section .about-details .text{
-                text-align: justify !important;
-            }
-        
-                
-        
-                /*Ajuste de responsividade na  Area de palestrante*/
-        
-        
-                .palestrantes-section .palestrantes-item {
-                    flex-direction: column; 
-                    gap: 70px !important; 
-                }
-            
-                .palestrantes-section .palestrantes-item .palestrantes-item {
-                    flex: 1 1 100%; 
-                    max-width: 100%; 
-                }
-            
-                .palestrantes-section .palestrantes-item .palestrantes-item  {
-                    width: 100%;
-                    margin-bottom: 10px; 
-                }
-                .menu-image{
-                    width: 75%;
-                }
-                /*Ajuste de responsividade para programacao*/
-
-                .programacao-section{
-                    padding: 120px 0px !important;
-                }
-
-                .table-container {
-                    width: 100%; /* Ocupa toda a largura do container */
-                    height: 100%; /* Ocupa toda a altura do container */
-                    border-collapse: collapse; 
-                    overflow-x:visible !important;
-                  }
-        
-                  .palestrantes-section .lista-palestrantes {
-                    flex-direction: column; /* Organiza os palestrantes verticalmente */
-                    gap: 30px; /* Espaçamento entre os itens */
-                }
-            
-                .palestrantes-section .lista-palestrantes .palestrantes-item {
-                    flex: 1 1 100%; /* Cada item ocupa 100% da largura */
-                    max-width: 100%; /* Garante que os itens não ultrapassem a largura */
-                    text-align: center; /* Centraliza o conteúdo */
-                }
-            
-                .palestrantes-section .lista-palestrantes .palestrantes-item .menu-image {
-                    max-width: 150px; /* Ajusta o tamanho da imagem para telas menores */
-                    margin: 0 auto 15px auto; /* Centraliza a imagem */
-                }        
-}
-
-@media screen and (max-width: 971px){
-    .banner-section .section-content{
-        gap: 50px;
-        text-align: center;
-        padding: 30px 20px 20px;
-        flex-direction: column-reverse;
+    .banner-section .banner-details .botoes {
         justify-content: center;
-
-        
     }
-        .navbar .nav-menu{
-            display:block;
-            position: fixed;
-            left: -300px;
-            top: 0;
-            width: 300px;
-            height: 100%;
-            background: white;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 100px;
-            transition: left 0.2s ease;
     
-        }
-    
-        body.mobile-menu-show header::before{
-            content: "";
-            position: fixed;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            backdrop-filter: blur(5px);
-            background: rgba(0, 0, 0, 0.2);
-    
-        }
-    
-    
-    
-        .navbar .nav-menu .nav-link{
-            color: black;
-            font-size: larger;
-            display: block;
-            margin-top: 17px;
-    
-        }
-    
-        .navbar #menu-fechar-button, #menu-abrir-button{
-            display: block;
-            font-size: larger;
-        }
-    
-        .navbar #menu-fechar-button{
-            position: absolute;
-            right: 30px;
-            top: 30px;
-        }
-    
-        .navbar #menu-abrir-button{
-            color: white;
-        }
-        body.mobile-menu-show .navbar .nav-menu{
-            left: 0;
-        }
+    .banner-section .banner-image-wrapper {
+        max-width: 270px;
+        margin-right: 0;
+    }
 
-        .banner-section .section-content{
-            gap: 50px;
-            text-align: center;
-            padding: 30px 20px 20px;
-            flex-direction: column-reverse;
-            justify-content: center;
-        }
-        .banner-section .banner-details :is(.subtitulo,.descricao), 
-        .about-section.banner-details{
-            max-width: 100%;
-            
-        }
-        .banner-section .banner-details .botoes{
-            justify-content: center;
-        }
+    /* Palestrantes section */
+    .palestrantes-section .palestrantes-item {
+        gap: 30px;
+        flex-direction: column;
+    }
+    
+    .palestrantes-section .palestrantes-item .child-item {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+    
+    .palestrantes-section .palestrantes-item .menu-image {
+        max-width: 200px;
+        width: 75%;
+        margin: 0 auto;
+    }
 
+    /* About section */
+    .about-section {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    
+    .about-section .section-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .about-section .about-details .text,
+    .programacao-section .text {
+        max-width: 100%;
+        margin: 0;
+        text-align: justify;
+        line-height: 1.8;
+    }
 
-        .banner-section .banner-image-wrapper{
-           max-width: 270px;
-           margin-right: 0;
-        }
-        .palestrantes-section .palestrantes-item{
-            gap: 30px;
-        }
-        .palestrantes-section .palestrantes-item .palestrantes-item{
-            width: calc(100%/2 - 30px);
-        }
-        .palestrantes-section .palestrantes-item .palestrantes-item .menu-image{
-            max-width: 200px;
-        }
-
-        .about-section .section-content{
-            flex-direction: column;
-            gap: 30px;
-        }
-
-                /*Ajuste de responsividade na  Area de sobre e programação*/
-
-                .about-section .section-content,
-                .programacao-section .text {
-            max-width: 100%; /* Permite que o texto ocupe toda a largura do container */
-            margin: 0; /* Remove margens laterais */
-            text-align: justify; /* Justifica o texto para ocupar todo o espaço horizontal */
-            line-height: 1.8; /* Aumenta o espaçamento entre as linhas para melhor legibilidade */
-        }
-        
-            .about-section{
-                padding-left: 0px !important;
-                padding-right: 0px !important;
-            }
-        
-            .about-section .about-details .text{
-                text-align: justify !important;
-            }
-        
-                
-        
-                /*Ajuste de responsividade na  Area de palestrante*/
-        
-        
-                .palestrantes-section .palestrantes-item {
-                    flex-direction: column; 
-                    gap: 70px !important; 
-                }
-                            .menu-image{
-                    width: 75%;
-                }
-                .palestrantes-section .palestrantes-item .palestrantes-item {
-                    flex: 1 1 100%; 
-                    max-width: 100%; 
-                }
-            
-                .palestrantes-section .palestrantes-item .palestrantes-item .menu-image {
-                    width: 100%;
-                    margin-bottom: 10px; 
-                }
-
-                /*Ajuste de responsividade para programacao*/
-
-                .programacao-section{
-                    padding: 120px 0px !important;
-                }
-
-                .table-container {
-                    width: 100%; /* Ocupa toda a largura do container */
-                    height: 100%; /* Ocupa toda a altura do container */
-                    border-collapse: collapse; 
-                    overflow-x:visible !important;
-                  }
-        
-                  .palestrantes-section .lista-palestrantes {
-                    flex-direction: column; /* Organiza os palestrantes verticalmente */
-                    gap: 30px; /* Espaçamento entre os itens */
-                }
-            
-                .palestrantes-section .lista-palestrantes .palestrantes-item {
-                    flex: 1 1 100%; /* Cada item ocupa 100% da largura */
-                    max-width: 100%; /* Garante que os itens não ultrapassem a largura */
-                    text-align: center; /* Centraliza o conteúdo */
-                }
-            
-                .palestrantes-section .lista-palestrantes .palestrantes-item .menu-image {
-                    max-width: 150px; /* Ajusta o tamanho da imagem para telas menores */
-                    margin: 0 auto 15px auto; /* Centraliza a imagem */
-                }        
+    /* Programação section */
+    .programacao-section {
+        padding: 120px 0 !important;
+    }
+    
+    .table-container {
+        width: 100%;
+        border-collapse: collapse;
+        overflow-x: auto;
+    }
 }
-@media screen and (max-width:410px) {
+@media screen and (max-width: 410px) {
     #programacaoContent {
         width: 100%;
         height: auto;
-        font-size: 12px; /* Reduz o tamanho da fonte */
-        overflow-x: auto; /* Permite rolagem horizontal se necessário */
+        font-size: 12px;
+        overflow-x: auto;
     }
 
     .table-container {
-        width: 100%; /* Ajusta a largura da tabela */
-        font-size: 10px; /* Reduz o tamanho da fonte dentro da tabela */
+        font-size: 10px;
     }
 
-    .table-container th, .table-container td {
-        padding: 5px; /* Reduz o espaçamento interno das células */
+    .table-container th, 
+    .table-container td {
+        padding: 5px;
+    }
+    
+    /* Ajustes adicionais para mobile muito pequeno */
+    .navbar, .section-content .nav-menu {
+        width: 250px;
+        padding: 80px 20px;
+    }
+    
+    .palestrantes-section .palestrantes-item .menu-image {
+        width: 60%;
+    }
+}
+@media screen and (max-width: 400px) {
+    #programacaoContent {
+        width: 100%;
+        height: auto;
+        font-size: 12px;
+        overflow-x: auto;
+    }
+
+    .table-container {
+        font-size: 10px;
+    }
+
+    .table-container th, 
+    .table-container td {
+        padding: 5px;
+    }
+    
+    /* Ajustes adicionais para mobile muito pequeno */
+    .navbar, .section-content .nav-menu {
+        width: 250px;
+        padding: 80px 20px;
+    }
+    
+    .palestrantes-section .palestrantes-item .menu-image {
+        width: 60%;
     }
 }

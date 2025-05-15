@@ -6,7 +6,7 @@
     <?php include('./snippets/navegacao.html'); ?>
 
     <!-- Sessão Banner -->
-    <?php include('./snippets/banner.html'); ?>
+    <?php include('./snippets/home.html'); ?>
 
     <!-- Sessão Sobre -->
     <?php include('./snippets/sobre.html'); ?>
@@ -19,7 +19,7 @@
 
 
      <!-- Sessão dos contatos -->
-     <?php include('./snippets/contato.html'); ?>
+     <?php include('./snippets/patrocinadores.html'); ?>
 
     <!-- Footer -->
     <?php include('./snippets/rodape.html'); ?>

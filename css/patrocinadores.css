@@ -1,0 +1,47 @@
+.h2-patrocinio {
+    text-align: left;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+.patrocinio{
+    height: 100%;
+    padding: 50px;
+}
+.header-patrocinio {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.divisao {
+    border: 1px solid #000;
+    margin: 0 0 0 1rem;
+    flex-grow: 1;
+}
+
+.patrocinio-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.patrocinio-item {
+    flex: 0 1 auto;
+    text-align: center;
+    padding: 50px;
+}
+
+.img-patrocinio {
+    display: block;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .patrocinio-section {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
