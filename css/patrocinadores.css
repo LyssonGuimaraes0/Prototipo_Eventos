@@ -1,7 +1,14 @@
+
 .h2-patrocinio {
     text-align: left;
     font-size: 1rem;
     margin-bottom: 0.5rem;
+}
+
+.patrocinadores-section{
+    color: var(--white-color);
+    background: white;
+     padding: 50px;
 }
 .patrocinio{
     height: 100%;
@@ -24,7 +31,6 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
-    flex-wrap: wrap;
     margin-top: 1rem;
 }
 
@@ -37,6 +43,13 @@
 .img-patrocinio {
     display: block;
     margin: 0 auto;
+}
+
+.row-patrocinio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 
 @media (max-width: 768px) {
