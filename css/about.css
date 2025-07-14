@@ -83,3 +83,31 @@
 .about-section .about-details .section-title{
     padding: 0;
 }
+
+/* Responsivo para mobile */
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+        padding: 40px 10px;
+    }
+    .about-section .section-content {
+        flex-direction: column;
+        gap: 0;
+        align-items: stretch;
+    }
+    .about-section .about-details {
+        max-width: 100%;
+        width: 100%;
+        margin: 0;
+    }
+    .about-section .about-image-wrapper {
+        width: 100%;
+        max-width: 250px;
+        margin-bottom: 30px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
