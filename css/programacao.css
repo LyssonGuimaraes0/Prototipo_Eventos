@@ -1,78 +1,77 @@
-.programacao-section{
-    justify-content: center;
-    align-items: center;
-    justify-items: center;
-    padding: 120px;
-}
 
-#programacaoContent,#text-center{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-}
-
-#programacaoTabs {
-        display: flex;
-        gap: 1px;
-        margin-bottom: 10px;
-    }
-
-    .tab-button {
-        padding: 10px 20px;
-        border: 1px solid #ccc;
-        background-color: #f9f9f9;
-        cursor: pointer;
-    }
-
-    .tab-button.active {
-        background-color: #007bff;
-        color: #fff;
-        border-color: #007bff;
-    }
-
-    .tab-pane {
-        display: none;
-        width: 100%;
-    }
-
-    .tab-pane.active {
-        display: block;
-        width: 100%;
-    }
-
-    .table-container {
-        overflow-x: auto;
-        width: 100%;
-    }
-
-    .custom-table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-bottom: 20px;
-        min-width: 350px;
-    }
-
-    .custom-table th,
-    .custom-table td {
-        border: 1px solid #ddd;
-        padding: 8px;
-        text-align: center;
-    }
-
-    .custom-table th {
-        background-color: #f2f2f2;
-        font-weight: bold;
-    }
-
-    .text-center {
-        text-align: center;
-    }
-
-    
-
-
-
-
-
+        
+        .programacao-section { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        h4 { font-family: finalSix, Arial, Helvetica, sans-serif; font-size: 1.5rem; margin-bottom: 10px; }
+        .tab-pane { display: none; }
+        .tab-pane.active { display: block; }
+        .tabs { display: flex; margin-bottom: 0; }
+        .tab-button {
+            padding: 10px 24px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1rem;
+            border-radius: 5px 5px 0 0;
+            margin-right: 2px;
+            background: #ebeced;
+            color: #757575;
+            transition: background 0.2s, color 0.2s;
+        }
+        .tab-button.active {
+            background: #b13fc4;
+            color: #fcfafa;
+        }
+        .tab-content { margin-top: 0; }
+        .table-programming {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 0;
+            background: #fff;
+        }
+        .table-programming th, .table-programming td {
+            border: 1px solid #e0e0e0;
+            padding: 12px 8px;
+            text-align: center;
+            vertical-align: middle;
+        }
+        .table-programming th.text-center, .table-programming td.text-center {
+            text-align: center;
+        }
+        .tabsections03 th {
+            background: linear-gradient(90deg, #b13fc4 0%, #7c3fdc 100%);
+            color: #fff;
+            font-size: 1.1rem;
+            font-family: finalSix, Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+        #tabhead th {
+            background: linear-gradient(90deg, #7c3fdc 0%, #1ca7ec 100%);
+            color: #fff;
+            font-size: 1rem;
+            font-family: finalSix, Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+        .tabsections td, .tabsections th {
+            background: linear-gradient(90deg, #b13fc4 0%, #7c3fdc 100%);
+            color: #fff;
+            font-weight: bold;
+            font-family: finalSix, Arial, Helvetica, sans-serif;
+        }
+        .tabsections02 td, .tabsections02 th {
+            background: linear-gradient(90deg, #1ca7ec 0%, #0099f7 100%);
+            color: #fff;
+            font-weight: bold;
+            font-family: finalSix, Arial, Helvetica, sans-serif;
+        }
+        .td-bold { font-weight: bold; }
+        .palestrantes strong { display: block; margin-bottom: 2px; }
+        .palestrantes small { display: block; margin-bottom: 8px; }
+        @media (max-width: 800px) {
+            .container { padding: 5px; }
+            .table-programming th, .table-programming td { font-size: 0.95rem; padding: 8px 4px; }
+            .tab-btn { padding: 8px 12px; font-size: 0.95rem; }
+        }
+        @media (max-width: 500px) {
+            .table-programming th, .table-programming td { font-size: 0.85rem; padding: 6px 2px; }
+        }
