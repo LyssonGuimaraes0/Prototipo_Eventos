@@ -85,40 +85,80 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-    document.addEventListener("DOMContentLoaded", function() {
-      // Seleciona todos os botões de expansão
-      const buttons = document.querySelectorAll('.toggle-btn');
-      
-      buttons.forEach(button => {
-          button.addEventListener('click', function(e) {
-              e.preventDefault();
-              
-              // 1. Isola o card específico que foi clicado
-              const card = this.closest('.palestrantes-item, .moderador-item');
-              
-              // 2. Encontra a biografia dentro deste card específico
-              const bio = card.querySelector('.collapse');
-              
-              // 3. Fecha TODAS as outras biografias
-              document.querySelectorAll('.collapse').forEach(otherBio => {
-                  if (otherBio !== bio) {
-                      otherBio.classList.remove('show');
-                      
-                      // 4. Atualiza TODOS os outros botões
-                      const otherButton = otherBio.closest('.palestrantes-item, .moderador-item')
-                                                  .querySelector('.toggle-btn');
-                      otherButton.textContent = 'Expandir biografia';
-                      otherButton.setAttribute('aria-expanded', 'false');
-                  }
-              });
-              
-              // 5. Alterna APENAS a biografia clicada
-              bio.classList.toggle('show');
-              
-              // 6. Atualiza APENAS o botão clicado
-              const isExpanded = bio.classList.contains('show');
-              this.textContent = isExpanded ? 'Ler menos' : 'Expandir biografia';
-              this.setAttribute('aria-expanded', isExpanded);
-          });
+document.addEventListener("DOMContentLoaded", function () {
+    const OFFSET = 80; // Altura da navbar fixa + buffer para evitar conflitos
+  
+    // Suavizar o scrolling ao clicar em um botão de navegação
+    document.querySelectorAll("a.nav-link").forEach(function (link) {
+      link.addEventListener("click", function (event) {
+        if (this.hash) {
+          event.preventDefault();
+          const targetElement = document.querySelector(this.hash);
+  
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - OFFSET, // Ajuste para compensar a altura da navbar fixa
+              behavior: "smooth",
+            });
+  
+            // Atualiza o hash na URL sem recarregar a página
+            history.pushState(null, null, this.hash);
+          }
+        }
       });
+    });
+  
+    // Atualizar as classes 'active' para refletir a área visível da página, exceto na seção "programacao"
+    const sections = document.querySelectorAll("section[id]");
+    const navLinks = document.querySelectorAll("a.nav-link");
+  
+    function updateActiveLink() {
+      let currentSection = "";
+  
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop - OFFSET;
+        const sectionHeight = section.offsetHeight;
+  
+        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+          currentSection = `#${section.id}`;
+        }
+      });
+  
+      navLinks.forEach((link) => {
+       
+  
+    // Adicionar evento de rolagem para atualizar as classes 'active'
+    window.addEventListener("scroll", updateActiveLink);
+  
+    // Atualizar as classes 'active' ao carregar a página
+    updateActiveLink();
+  
+    // Toggle collapsed class on navbar-toggler
+    const navbarToggler = document.querySelector(".navbar-toggler");
+    if (navbarToggler) {
+      navbarToggler.addEventListener("click", function () {
+        this.classList.toggle("collapsed");
+      });
+    }
+  
+    // Collapse navbar when clicking on the brand link
+    const navbarBrand = document.querySelector("a.navbar-brand");
+    if (navbarBrand) {
+      navbarBrand.addEventListener("click", function () {
+        const navbarCollapse = document.querySelector(".navbar-collapse");
+        if (navbarCollapse && navbarCollapse.classList.contains("show")) {
+          navbarCollapse.classList.remove("show");
+        }
+      });
+    }
   });
+  
+      // Adicionar evento de rolagem para atualizar as classes 'active'
+      window.addEventListener("scroll", updateActiveLink);
+  
+      // Atualizar as classes 'active' ao carregar a página
+      updateActiveLink();
+  
+  }
+  });
+  
