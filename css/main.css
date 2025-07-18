@@ -7,8 +7,10 @@
 @import url("../css/about.css");
 @import url("../css/palestrantes.css");
 @import url("../css/galeria.css");
+@import url("../css/download.css");
 
 * {
+
     margin: 0;
     padding: 0;
     box-sizing: border-box;

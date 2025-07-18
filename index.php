@@ -16,7 +16,9 @@
 
     <!-- Sessão dos Patrocinadores -->
     <?php include('./snippets/palestrantes.html'); ?>
-
+    
+    <!-- Sessão dos download -->
+    <?php include('./snippets/download.html'); ?>
 
      <!-- Sessão dos contatos -->
      <?php include('./snippets/patrocinadores.html'); ?>
