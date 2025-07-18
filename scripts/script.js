@@ -162,3 +162,16 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   });
   
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.toggle-btn').forEach(button => {
+        button.addEventListener('click', function(e) {
+            let targetCollapse = document.querySelector(this.getAttribute('href'));
+          
+            // Alterna o atual
+            targetCollapse.classList.toggle('show');
+            this.textContent = targetCollapse.classList.contains('show') 
+                ? 'Recolher biografia' 
+                : 'Expandir biografia';
+        });
+    });
+});

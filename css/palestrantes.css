@@ -47,15 +47,18 @@
     display: none;
     height: 0;
     overflow: hidden;
-    transition: height 0.3s ease;
+    transition: height 0.3s ease, opacity 0.3s ease;
 }
 
 .collapse.show {
     display: block;
-    height: auto;
     animation: fadeIn 0.4s ease;
 }
 
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 /* --- Estilo para Itens Individuais (Palestrante/Moderador) --- */
 .palestrantes-item,
 .moderador-item {
@@ -98,7 +101,6 @@
     padding: 8px 16px;
     background-color: #1a8cce;
     color: white;
-    border: none;
     border-radius: 4px;
     cursor: pointer;
     transition: all 0.2s ease;
@@ -106,7 +108,6 @@
 
 .toggle-btn:hover {
     background-color: #0e51ce;
-    transform: translateY(-2px);
 }
 
 .toggle-btn:active {
@@ -123,8 +124,6 @@
     display: flex;
     flex-direction: column;
     height: auto;
-    /* Remover min-height aqui ou ajustar, pois o conteúdo expandido pode exceder */
-    /* min-height: 380px; */ 
     justify-content: space-between;
     flex-grow: 1;
     width: 100%;
