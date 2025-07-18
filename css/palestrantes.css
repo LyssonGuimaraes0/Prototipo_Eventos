@@ -1,83 +1,243 @@
-.palestrantes-section{
-   color: var(--white-color);
-   background: gray;
+:root {
+    --white-color: #333;
+    --font-size-m: 16px;
+    --primary-blue: rgb(26, 140, 206);
+    --darker-blue: rgb(14, 81, 206);
+}
+
+/* --- Seção Geral de Palestrantes e Moderadores --- */
+.palestrantes-section {
+    color: #333;
+    background: rgb(255, 255, 255);
     padding: 50px;
 }
-.palestrantes-section .lista-palestrantes{
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2em;
+    color: #333;
+}
+
+/* --- Estilo para Listas de Palestrantes e Moderadores --- */
+.lista-palestrantes,
+.lista-moderador {
     display: flex;
     flex-wrap: wrap;
-    gap: 110px;
-    align-items: center; /* Garante que todos os itens tenham a mesma altura */
+    gap: 30px;
     justify-content: center;
-    align-content: center;
     margin: 0 auto;
+    padding: 0;
+    list-style: none;
 }
 
-.palestrantes-section .lista-palestrantes .palestrantes-item {
+/* --- Estilo para Itens Individuais (Palestrante/Moderador) --- */
+.palestrantes-item,
+.moderador-item {
     display: flex;
-    flex-direction: column; /* Organiza os elementos verticalmente */
-    align-items: center; /* Centraliza os elementos horizontalmente */
-    justify-content: flex-start; /* Alinha os elementos ao topo */
-    flex: 1 1 calc(33.33% - 110px);
+    flex-direction: column;
+    align-items: center;
     text-align: center;
+    box-sizing: border-box;
+    flex: 1 1 calc(33.33% - 30px);
+    max-width: 350px;
+}
+/* Garante que apenas o collapse da biografia seja controlado */
+.collapse {
+    display: none;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
 }
 
-.palestrantes-section .lista-palestrantes .palestrantes-item .menu-image {
-    max-width: 83%;
+.collapse.show {
+    display: block;
+    height: auto;
+    animation: fadeIn 0.4s ease;
+}
+
+/* --- Estilo para Itens Individuais (Palestrante/Moderador) --- */
+.palestrantes-item,
+.moderador-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    flex: 1 1 calc(33.33% - 30px);
+    max-width: 350px;
+}
+/* Garante que apenas o collapse da biografia seja controlado */
+.collapse {
+    display: none;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+}
+
+.collapse.show {
+    display: block;
+    height: auto;
+    animation: fadeIn 0.4s ease;
+}
+
+/* Protege os containers principais */
+.palestrantes-content,
+.moderador-content {
+    overflow: visible !important;
+    height: auto !important;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.toggle-btn {
+    margin-top: 15px;
+    padding: 8px 16px;
+    background-color: #1a8cce;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.toggle-btn:hover {
+    background-color: #0e51ce;
+    transform: translateY(-2px);
+}
+
+.toggle-btn:active {
+    transform: translateY(0);
+}
+.palestrantes-content,
+.moderador-content {
+    position: relative;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    /* Remover min-height aqui ou ajustar, pois o conteúdo expandido pode exceder */
+    /* min-height: 380px; */ 
+    justify-content: space-between;
+    flex-grow: 1;
+    width: 100%;
+}
+
+.palestrantes-content .menu-image,
+.moderador-content .menu-image {
+    max-width: 150px;
+    width: 100%;
     aspect-ratio: 1;
-    margin-bottom: 15px;
-    object-fit: cover; /* Preenche o contêiner sem distorcer */
+    margin: 0 auto 15px auto;
+    object-fit: cover;
     display: block;
     border-radius: 50%;
     overflow: hidden;
 }
 
-.palestrantes-section .lista-palestrantes .palestrantes-item .text {
-    font-size: var(--font-size-m);
-    text-align: justify; /* Justifica o texto */
-    flex-grow: 1; /* Faz o texto ocupar o espaço restante */
+.palestrantes-content .name,
+.moderador-content .name {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
 }
-.text description{
+
+/* **Importante para a lógica de expandir/recolher** */
+/* Mantenha o estilo para o parágrafo de texto curto inicial */
+.palestrantes-content .card-text,
+.moderador-content .card-text {
+    font-size: var(--font-size-m);
     text-align: justify;
-    font-size: var(--font-size-m);
-}
-
-.palestrantes-content {
-    position: relative;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #fff;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-}
-
-.palestrantes-content .description {
-    max-height:55px; /* Altura inicial da descrição: ajustar de acordo com a descrição */
+    margin-bottom: 15px;
+    color: #555;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
     overflow: hidden;
-    transition: max-height 0.3s ease;
+    text-overflow: ellipsis; /* Adiciona '...' se o texto for cortado */
 }
 
-.palestrantes-content .description.expanded {
-    max-height: 500px; /* Altura expandida */
+.palestrantes-content .collapse p,
+.moderador-content .collapse p {
+    font-size: var(--font-size-m);
+    text-align: justify;
+    color: #555;
+    margin-bottom: 15px; /* Adicione margem inferior para o parágrafo dentro do collapse */
 }
 
-.menu-image{
-    margin-left: 20px;
-}
 
-.expand-btn {
-    margin-top: 10px;
-    padding: 8px 16px;
-    background-color: yellowgreen;
+/* O botão deve ter a classe 'toggle-btn' no HTML e as classes de botão do Bootstrap */
+.toggle-btn { /* Renomeado de .expand-btn para .toggle-btn para consistência com o JS do Bootstrap */
+    margin-top: auto;
+    padding: 10px 20px;
+    background-color: var(--primary-blue);
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    align-self: center;
+    text-decoration: none; /* Garante que links não tenham sublinhado */
+    display: inline-block; /* Para que o padding e margens funcionem como esperado */
 }
 
-.expand-btn:hover {
-    background-color: darkgreen;
+.toggle-btn:hover {
+    background-color: var(--darker-blue);
+    color: white; /* Mantém a cor do texto branca no hover */
+}
+
+/* --- Media Queries para Responsividade --- */
+
+@media (max-width: 1199px) {
+    .palestrantes-item,
+    .moderador-item {
+        flex: 1 1 calc(50% - 30px);
+    }
+}
+
+@media (max-width: 767px) {
+    .palestrantes-item,
+    .moderador-item {
+        flex: 1 1 calc(100% - 20px);
+        max-width: 400px;
+    }
+
+    .palestrantes-section {
+        padding: 20px;
+    }
+
+    .lista-palestrantes,
+    .lista-moderador {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .palestrantes-content,
+    .moderador-content {
+        padding: 15px;
+    }
+
+    .palestrantes-content .name,
+    .moderador-content .name {
+        font-size: 1.3em;
+    }
+
+    .palestrantes-content .card-text,
+    .moderador-content .card-text,
+    .palestrantes-content .collapse p,
+    .moderador-content .collapse p {
+        font-size: calc(var(--font-size-m) * 0.9);
+    }
+
+    .toggle-btn {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
 }
