@@ -151,6 +151,11 @@
         overflow-x: auto;
     }
 
+    .container-download{
+        width: 100% !important;
+    }
+
+
     .palestrantes-section{
         padding-left : 0 !important;
         padding-right: 0 !important;
@@ -173,6 +178,10 @@
         height: auto;
         font-size: 12px;
         overflow-x: auto;
+    }
+
+    .container-download{
+        width: auto;
     }
 
     .table-container {
