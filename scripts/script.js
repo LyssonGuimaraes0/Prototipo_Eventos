@@ -39,16 +39,25 @@ document.getElementById("navbar").addEventListener("click", function(e) {
         });
     });
   
-  document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('.toggle-btn').forEach(button => {
-        button.addEventListener('click', function(e) {
-            let targetCollapse = document.querySelector(this.getAttribute('href'));
-          
-            // Alterna o atual
-            targetCollapse.classList.toggle('show');
-            this.textContent = targetCollapse.classList.contains('show') 
-                ? 'Recolher biografia' 
-                : 'Expandir biografia';
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.toggle-btn').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault(); // Impede o comportamento padrão do link
+    
+                const targetCollapseId = this.getAttribute('href');
+                const targetCollapse = document.querySelector(targetCollapseId);
+                
+                if (targetCollapse) {
+                    // Alterna a classe 'show'
+                    targetCollapse.classList.toggle('show');
+    
+                    // Altera o texto do botão
+                    if (targetCollapse.classList.contains('show')) {
+                        this.textContent = 'Recolher biografia';
+                    } else {
+                        this.textContent = 'Expandir biografia';
+                    }
+                }
+            });
         });
     });
-});
