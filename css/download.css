@@ -1,9 +1,4 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  margin: 0;
-  padding: 0;
-}
+
 
 #download {
   padding: 60px 20px;
@@ -11,7 +6,7 @@ body {
   justify-content: center;
 }
 
-.container {
+.container-download {
   max-width: 400px;
   background-color: #fff;
   padding: 30px;
@@ -20,7 +15,8 @@ body {
   text-align: center;
 }
 
-h4 {
+
+.download-title {
   margin-bottom: 20px;
   font-size: 24px;
   color: #333;
