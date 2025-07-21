@@ -8,8 +8,8 @@
     }
 }
 
-/* Menu mobile e ajustes gerais (900px para baixo) */
-@media screen and (max-width: 900px) {
+/* Menu mobile e ajustes gerais (920px para baixo) */
+@media screen and (max-width: 920px) {
     /* Menu mobile */
     .navbar .nav-menu {
         display: flex;
