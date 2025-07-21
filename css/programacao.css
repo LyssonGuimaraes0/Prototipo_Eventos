@@ -1,10 +1,25 @@
 
         
-        .programacao-section { max-width: 1200px; margin: 0 auto; padding: 20px; }
-        h4 { font-family: finalSix, Arial, Helvetica, sans-serif; font-size: 1.5rem; margin-bottom: 10px; }
-        .tab-pane { display: none; }
-        .tab-pane.active { display: block; }
-        .tabs { display: flex; margin-bottom: 0; }
+        .programacao-section { 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            padding: 20px; 
+        }
+        h4 { 
+            font-family: finalSix, Arial, Helvetica, sans-serif; 
+            font-size: 1.5rem; 
+            margin-bottom: 10px; 
+        }
+        .tab-pane 
+        { 
+            display: none; 
+        }
+        .tab-pane.active { 
+            display: block; 
+        }
+        .tabs { 
+            display: flex; margin-bottom: 0; 
+        }
         .tab-button {
             padding: 10px 24px;
             border: none;
