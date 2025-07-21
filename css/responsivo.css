@@ -23,6 +23,17 @@
         align-items: center;
         padding: 100px 30px;
         transition: left 0.2s ease;
+		z-index: 2;
+    }
+	
+	.navbar .navout {
+        position: fixed;
+        left: -301px;
+        top: 0;
+        width: 1px;
+        height: 1px;
+        background: rgba(0, 0, 0, 0);
+		z-index: 1;
     }
     
     body.mobile-menu-show header::before {
@@ -61,8 +72,14 @@
     
     body.mobile-menu-show .navbar .nav-menu {
         left: 0;
+		
     }
-
+	
+	body.mobile-menu-show .navbar .navout {
+        left: 0;
+		width: 100vw;
+		height: 100vh;
+    }
     /* Banner section */
     .banner-section .section-content {
         gap: 50px;

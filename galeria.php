@@ -18,6 +18,6 @@
     <?php include('./snippets/rodape.html'); ?>
 
     <!-- Chamada dos Scripts -->
-    <?php include('./snippets/scripts.html'); ?>
+    <?php include('./snippets/scripts-galeria.html'); ?>
 </body>
 </html>
