@@ -1,26 +1,15 @@
 
 
-#download {
-  padding: 60px 20px;
-  display: flex;
-  justify-content: center;
-}
-
 .container-download {
-  max-width: 400px;
-  background-color: #fff;
-  padding: 30px;
+  width: 400px;
+  height: auto;
+  background-color: #f9f9f9;
+  padding: 40px;
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0,0,0,0.1);
   text-align: center;
 }
 
-
-.download-title {
-  margin-bottom: 20px;
-  font-size: 24px;
-  color: #333;
-}
 
 .card {
   border: none;

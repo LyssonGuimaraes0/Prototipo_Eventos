@@ -1,3 +1,8 @@
+.section-gallery{
+    padding: 20px;
+    
+}
+
 .titulo {
 	
 	padding-top: 100px;
@@ -16,6 +21,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 4px;
+    margin-left: 60px;
 }
 
 .thumbnails img {
