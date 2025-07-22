@@ -17,13 +17,16 @@
         left: -300px;
         top: 0;
         width: 300px;
-        height: 100%;
+		color: white;
+        height: 100vh;
         background: white;
         flex-direction: column;
         align-items: center;
         padding: 100px 30px;
         transition: left 0.2s ease;
 		z-index: 2;
+		backdrop-filter: blur(8px) contrast(0.8) brightness(0.8) saturate(1.8);
+		background: rgba(18, 18, 18, 0.2) !important;	
     }
 	
 	.navbar .navout {
@@ -34,6 +37,7 @@
         height: 1px;
         background: rgba(0, 0, 0, 0);
 		z-index: 1;
+		background: rgba(18, 18, 18, 0.3);
     }
     
     body.mobile-menu-show header::before {
@@ -43,12 +47,11 @@
         top: 0;
         width: 100%;
         height: 100%;
-        backdrop-filter: blur(5px);
-        background: rgba(0, 0, 0, 0.2);
+        
     }
     
     .navbar .nav-menu .nav-link {
-        color: black;
+        color: white;
         font-size: larger;
         display: block;
         margin-top: 17px;

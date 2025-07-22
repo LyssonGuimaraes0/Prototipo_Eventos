@@ -1,5 +1,5 @@
 .banner-section{
-    background: grey;
+    background: linear-gradient(135deg,rgba(206, 224, 224, 1) 0%, rgba(120, 142, 156, 1) 29%, rgba(88, 105, 128, 1) 67%, rgba(62, 64, 102, 1) 100%);
     min-height: 100vh;
 }
 

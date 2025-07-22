@@ -1,7 +1,8 @@
 /*Navbar*/
 
 header {
-	background-color: rgba(0,0,0,204) !important;
+	backdrop-filter: blur(8px) contrast(0.8) brightness(0.8) saturate(1.8);
+    background: rgba(18, 18, 18, 0.3) !important;
 	max-width: 100vw;
     position: fixed;
     width: 100vw;
@@ -12,7 +13,7 @@ header {
 header .navbar {
 	
 	font-family: Arial, sans-serif;
-	background-color: rgba(0,0,0,204) !important;
+    background: rgba(0, 0, 0, 0) !important;
 	max-width: 100vw;
     display: flex;
     justify-content: space-between;
