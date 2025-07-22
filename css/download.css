@@ -1,4 +1,7 @@
-
+.download-section{
+    background: linear-gradient(135deg,rgba(206, 224, 224, 1),rgba(176, 204, 214, 1));
+    padding: 100px 10%;
+}
 
 .container-download {
   width: 400px;

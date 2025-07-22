@@ -1,6 +1,7 @@
 
         
         .programacao-section { 
+			background: linear-gradient(135deg,rgba(206, 224, 224, 1),rgba(176, 204, 214, 1));
             margin: 0 auto; 
             padding: 20px; 
         }
