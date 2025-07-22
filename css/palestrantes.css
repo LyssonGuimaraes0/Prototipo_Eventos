@@ -23,6 +23,7 @@
     margin: 0 auto;
     padding: 0;
     list-style: none;
+    align-items: flex-start;
 }
 
 /* --- Estilo para Itens Individuais (Palestrante/Moderador) --- */
@@ -60,7 +61,7 @@
 
 .palestrantes-content .menu-image,
 .moderador-content .menu-image {
-    max-width: 150px;
+    max-width: 60%;
     width: 100%;
     aspect-ratio: 1;
     margin: 0 auto 15px auto;
