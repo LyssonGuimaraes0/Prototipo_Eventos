@@ -3,6 +3,10 @@
     min-height: 100vh;
 }
 
+.banner-image{
+    width: 100%;
+}
+
 .banner-section .section-content{
 
     display: flex;

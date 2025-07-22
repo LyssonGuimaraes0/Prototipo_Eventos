@@ -56,6 +56,10 @@
         display: block;
         margin-top: 17px;
     }
+
+    .navbar .nav-menu .subscribe{
+        color: white;
+    }
     
     .navbar #menu-fechar-button, 
     .navbar #menu-abrir-button {
@@ -154,6 +158,11 @@
         overflow-x: auto;
     }
 
+    .container-download{
+        width: 100% !important;
+    }
+
+
     .palestrantes-section{
         padding-left : 0 !important;
         padding-right: 0 !important;
@@ -176,6 +185,10 @@
         height: auto;
         font-size: 12px;
         overflow-x: auto;
+    }
+
+    .container-download{
+        width: auto;
     }
 
     .table-container {
@@ -223,6 +236,8 @@
     .palestrantes-section .palestrantes-item .menu-image {
         width: 60%;
     }
+
+    
 
 
 }

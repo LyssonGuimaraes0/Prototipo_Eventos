@@ -12,23 +12,18 @@
     padding: 50px;
 }
 
-.section-title {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 2em;
-    color: #333;
-}
 
 /* --- Estilo para Listas de Palestrantes e Moderadores --- */
 .lista-palestrantes,
 .lista-moderador {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 45px;
     justify-content: center;
     margin: 0 auto;
     padding: 0;
     list-style: none;
+    align-items: flex-start;
 }
 
 /* --- Estilo para Itens Individuais (Palestrante/Moderador) --- */
@@ -39,80 +34,15 @@
     align-items: center;
     text-align: center;
     box-sizing: border-box;
-    flex: 1 1 calc(33.33% - 30px);
-    max-width: 350px;
-}
-/* Garante que apenas o collapse da biografia seja controlado */
-.collapse {
-    display: none;
-    height: 0;
-    overflow: hidden;
-    transition: height 0.3s ease, opacity 0.3s ease;
+    /* Manter flex-basis para controle de largura */
+    /*flex: 1 1 calc(33.33% - 30px);*/ /* Ajuste conforme necessário para 3 colunas */
+    flex-basis: calc(33.33% - 30px); /* Controla a largura inicial /
+    */
+
+
 }
 
-.collapse.show {
-    display: block;
-    animation: fadeIn 0.4s ease;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-40px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-/* --- Estilo para Itens Individuais (Palestrante/Moderador) --- */
-.palestrantes-item,
-.moderador-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    box-sizing: border-box;
-    flex: 1 1 calc(33.33% - 30px);
-    max-width: 350px;
-}
-/* Garante que apenas o collapse da biografia seja controlado */
-.collapse {
-    display: none;
-    height: 0;
-    overflow: hidden;
-    transition: height 0.3s ease;
-}
-
-.collapse.show {
-    display: block;
-    height: auto;
-    animation: fadeIn 0.4s ease;
-}
-
-/* Protege os containers principais */
-.palestrantes-content,
-.moderador-content {
-    overflow: visible !important;
-    height: auto !important;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.toggle-btn {
-    margin-top: 15px;
-    padding: 8px 16px;
-    background-color: #1a8cce;
-    color: white;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.toggle-btn:hover {
-    background-color: #0e51ce;
-}
-
-.toggle-btn:active {
-    transform: translateY(0);
-}
+/* Protege os containers principais, removendo overflow: visible !important */
 .palestrantes-content,
 .moderador-content {
     position: relative;
@@ -123,7 +53,7 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-    height: auto;
+    height: 100%; /* Importante para que os cards em uma linha tenham a mesma altura */
     justify-content: space-between;
     flex-grow: 1;
     width: 100%;
@@ -131,7 +61,7 @@
 
 .palestrantes-content .menu-image,
 .moderador-content .menu-image {
-    max-width: 150px;
+    max-width: 60%;
     width: 100%;
     aspect-ratio: 1;
     margin: 0 auto 15px auto;
@@ -146,9 +76,9 @@
     font-size: 1.5em;
     margin-bottom: 10px;
     color: #333;
+    font-family: "FinalSix";
 }
 
-/* **Importante para a lógica de expandir/recolher** */
 /* Mantenha o estilo para o parágrafo de texto curto inicial */
 .palestrantes-content .card-text,
 .moderador-content .card-text {
@@ -159,7 +89,7 @@
     display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    text-overflow: ellipsis; /* Adiciona '...' se o texto for cortado */
+    /*text-overflow: ellipsis; /* Adiciona '...' se o texto for cortado */
 }
 
 .palestrantes-content .collapse p,
@@ -167,13 +97,35 @@
     font-size: var(--font-size-m);
     text-align: justify;
     color: #555;
-    margin-bottom: 15px; /* Adicione margem inferior para o parágrafo dentro do collapse */
+    margin-bottom: 15px;
 }
 
+/* --- ESTILO PARA O COLLAPSE (ESSENCIAL PARA A CORREÇÃO) --- */
+.collapse {
+    max-height: 0; /* Começa com altura zero */
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out; /* Transição suave */
+    opacity: 0; /* Oculta o conteúdo */
+    padding-top: 0; /* Garante que não haja padding quando fechado */
+    padding-bottom: 0; /* Garante que não haja padding quando fechado */
+}
 
-/* O botão deve ter a classe 'toggle-btn' no HTML e as classes de botão do Bootstrap */
-.toggle-btn { /* Renomeado de .expand-btn para .toggle-btn para consistência com o JS do Bootstrap */
-    margin-top: auto;
+.collapse.show {
+    max-height: 500px; /* Um valor grande o suficiente para qualquer biografia. Ajuste se necessário. */
+    opacity: 1; /* Torna o conteúdo visível */
+    padding-top: 10px; /* Adiciona padding quando expandido, se desejar */
+    padding-bottom: 10px; /* Adiciona padding quando expandido, se desejar */
+}
+
+/* Opcional: Animação de fade-in para o conteúdo quando ele aparece */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* O botão deve ter a classe 'toggle-btn' no HTML */
+.toggle-btn {
+    margin-top: auto; /* Empurra o botão para a parte inferior do card */
     padding: 10px 20px;
     background-color: var(--primary-blue);
     color: white;
@@ -181,18 +133,17 @@
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    align-self: center;
-    text-decoration: none; /* Garante que links não tenham sublinhado */
-    display: inline-block; /* Para que o padding e margens funcionem como esperado */
+    align-self: center; /* Centraliza o botão */
+    text-decoration: none;
+    display: inline-block;
 }
 
 .toggle-btn:hover {
     background-color: var(--darker-blue);
-    color: white; /* Mantém a cor do texto branca no hover */
+    color: white;
 }
 
 /* --- Media Queries para Responsividade --- */
-
 @media (max-width: 1199px) {
     .palestrantes-item,
     .moderador-item {
@@ -206,11 +157,9 @@
         flex: 1 1 calc(100% - 20px);
         max-width: 400px;
     }
-
     .palestrantes-section {
         padding: 20px;
     }
-
     .lista-palestrantes,
     .lista-moderador {
         gap: 20px;
@@ -222,19 +171,16 @@
     .moderador-content {
         padding: 15px;
     }
-
     .palestrantes-content .name,
     .moderador-content .name {
         font-size: 1.3em;
     }
-
     .palestrantes-content .card-text,
     .moderador-content .card-text,
     .palestrantes-content .collapse p,
     .moderador-content .collapse p {
         font-size: calc(var(--font-size-m) * 0.9);
     }
-
     .toggle-btn {
         padding: 8px 15px;
         font-size: 0.9em;
