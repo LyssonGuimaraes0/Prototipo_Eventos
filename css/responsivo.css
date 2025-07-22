@@ -53,6 +53,10 @@
         display: block;
         margin-top: 17px;
     }
+
+    .navbar .nav-menu .subscribe{
+        color: white;
+    }
     
     .navbar #menu-fechar-button, 
     .navbar #menu-abrir-button {
@@ -229,6 +233,8 @@
     .palestrantes-section .palestrantes-item .menu-image {
         width: 60%;
     }
+
+    
 
 
 }
