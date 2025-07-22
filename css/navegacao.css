@@ -68,7 +68,8 @@ header .navbar {
 .nav-link:hover {
   transition: 0.5s ease-out;
   font-weight: light !important;
-  background: linear-gradient(45deg, rgba(121, 177, 212,255), rgba(124, 112, 184,255));
+  background-color: rgba(0,0,0,0);
+  background: linear-gradient(45deg, rgba(121, 177, 212,50), rgba(124, 112, 184,50));
 }
 
 .nav-link.active:hover {
