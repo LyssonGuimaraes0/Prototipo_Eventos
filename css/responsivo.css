@@ -26,7 +26,8 @@
         transition: 0.3s cubic-bezier(1,.4,1,1.1);
 		z-index: 2;
 		backdrop-filter: blur(8px) contrast(0.8) brightness(0.7) saturate(1.8);
-		background: linear-gradient(135deg, rgba(30, 30, 30, 0.15), rgba(10,10,10,0.15)) !important;
+		background: linear-gradient(135deg, rgba(12, 11, 11, 0.774), rgba(10, 10, 10, 0.959)) !important;
+        /**/
     }
 	
 	.navbar .navout {
@@ -86,7 +87,7 @@
         left: 0;
 		width: 100vw;
 		height: 100vh;
-		background: rgba(18, 18, 18, 0.3);
+		background: rgba(18, 18, 18, 0.87);
 		transition: background 0.3s cubic-bezier(0,.2,.15,.85);
     }
     /* Banner section */
