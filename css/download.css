@@ -1,6 +1,5 @@
 .download-section{
-    background: RGBA(206, 224, 224, 1);
-background: linear-gradient(135deg, rgba(206, 224, 224, 1) 0%, rgba(186, 214, 214, 1) 33%, rgba(176, 204, 214, 1) 66%, rgba(156, 184, 234, 1) 100%);
+	background: linear-gradient(135deg,rgba(216, 234, 234, 1) 0%, rgba(186, 214, 214, 1) 25%, rgba(176, 204, 214, 1) 50%, rgba(156, 184, 234, 1) 75%, rgba(158, 177, 219, 1) 100%);
     padding: 100px 10%;
 }
 
