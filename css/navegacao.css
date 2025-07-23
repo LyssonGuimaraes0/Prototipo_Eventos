@@ -1,8 +1,8 @@
 /*Navbar*/
 
 header {
-	backdrop-filter: blur(8px) contrast(0.8) brightness(0.8) saturate(1.8);
-    background: rgba(18, 18, 18, 0.3) !important;
+	backdrop-filter: blur(8px) contrast(0.8) brightness(0.7) saturate(1.8);
+    background: linear-gradient(135deg, rgba(30, 30, 30, 0.25), rgba(10,10,10,0.25)) !important;
 	max-width: 100vw;
     position: fixed;
     width: 100vw;
@@ -69,7 +69,7 @@ header .navbar {
   transition: 0.5s ease-out;
   font-weight: light !important;
   background-color: rgba(0,0,0,0);
-  background: linear-gradient(45deg, rgba(121, 177, 212,10), rgba(124, 112, 184,10));
+  background: linear-gradient(45deg, rgba(121, 177, 212,0.5), rgba(124, 112, 184,0.5));
 }
 
 .nav-link.active:hover {
