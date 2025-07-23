@@ -1,6 +1,5 @@
 .banner-section{
-    background: RGBA(206, 224, 224, 1);
-background: linear-gradient(135deg, rgba(206, 224, 224, 1) 0%, rgba(186, 214, 214, 1) 33%, rgba(176, 204, 214, 1) 66%, rgba(156, 184, 234, 1) 100%);
+	background: linear-gradient(135deg,rgba(216, 234, 234, 1) 0%, rgba(186, 214, 214, 1) 25%, rgba(176, 204, 214, 1) 50%, rgba(156, 184, 234, 1) 75%, rgba(158, 177, 219, 1) 100%);
     min-height: 100vh;
 }
 
@@ -17,23 +16,25 @@ background: linear-gradient(135deg, rgba(206, 224, 224, 1) 0%, rgba(186, 214, 21
     justify-content: space-between;
 }
 
-.banner-section .banner-details .subtitulo{
-    margin-top: 8px;
-    max-width: 70%;
-    font-size: larger;
+.banner-section .banner-details .titulo{
+	font-size: 1.8rem;
+	color: black;
 }
 
 .banner-section .banner-details .subtitulo{
     margin-top: 8px;
     max-width: 70%;
-    font-size: larger;
+	font-weight: bold;
+    font-size: 1.3rem;
+	color: black;
 }
 
 .banner-section .banner-details .descricao{
 
     max-width: 70%;
     margin: 24px 0 40px;
-    font-size: medium;
+    font-size: 1.1rem;
+	color: black;
 }
 
 .banner-section .banner-details .botoes{
