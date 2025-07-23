@@ -30,6 +30,7 @@ header .navbar {
 /*Icons desativados em resoluções maiores*/
 .navbar #menu-fechar-button, #menu-abrir-button{
     display:none;
+	color: #ffffff
 }
 
 .navbar .nav-menu .nav-link {
